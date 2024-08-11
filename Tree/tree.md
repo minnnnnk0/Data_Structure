@@ -57,3 +57,22 @@
 **Diff**   
 : 자신을 기준으로 왼쪽 최대 height와 오른쪽 최대 height의 차이   
 ( Root의 Diff는 1 )   
+
+
+
+## Binary Search Tree 이진탐색트리
+: 이진탐색트리는 각각의 노드에 데이터가 들어있음   
+노드를 기준으로 왼쪽은 노드보다 작은 값, 오른쪽은 노드보다 큰 값이 들어간다.   
+= 이렇게 미리 배치가 되어있는 것을 **이진탐색트리**라고 한다   
+(탐색은 *정렬되어 있다*는 의미)   
+
+- 이진탐색트리에서 사용하기 좋은 트리는 Balanced Tree   
+Complete, Perfect tree는 Balanced일 수 밖에 없음   
+Full은 Balanced일 수도, 아닐 수도 있음   
+
+    -> *Balanced가 보장되는 자료구조는 AVL트리, RedBlack트리가 있음 (매우 복잡)*   
+
+- 이진트리의 장점
+    - 탐색을하고 정렬이 되어 있어, 특정 값을 찾을 때 조회/삭제/삽입 모두 **O(logN)**으로 찾을 수 있음   
+    - 다만 Balanced이어야한다는 조전이 있다 (Balanced가 보장되지는 않음)   
+    -> 이 경우 AVL, RedBlack트리 작업을 해줘야 O(logN) 보장
