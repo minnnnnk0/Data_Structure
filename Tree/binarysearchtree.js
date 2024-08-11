@@ -42,6 +42,55 @@ class BinarySearchTree {
       this.#insert(this.root, value);
     }
   }
+
+  // ---------------------------------
+
+  // search 재귀용 함수
+  #search(node, value) {
+    // 찾으려는 값이 노드의 값보다 작을 때
+    if (node.value > value) {
+      // 왼쪽에 값이 없을 경우 null return
+      if (!node.left) {
+        return null;
+      }
+      // 찾으려는 값과 왼쪽에 있는 값이 같을 때, 그 값을 return
+      if (node.left.value === value) {
+        return node.left;
+      }
+      // 값을 찾지 못했다면, 재귀함수 호출
+      return this.#search(node.left, value);
+      
+    } else {
+      // 오른쪽에 값이 없을 경우 null return
+      if (!node.right) {
+        return null;
+      }
+      // 찾으려는 값과 오른쪽에 있는 값이 같을 때, 그 값을 return
+      if (node.right.value === value) {
+        return node.right;
+      }
+      // 값을 찾지 못했다면, 재귀함수 호출
+      return this.#search(node.right, value);
+    }
+  }
+
+  /**
+   * search는 return을 무조건 다 해줘야한다.
+   * 조회 => 수정은 조회를 활용한다.
+   */
+
+  search(value) {
+    // root에 값이 없다면 null return
+    if (!this.root) {
+      return null;
+    }
+    // 찾으려는 값이 root일 때, 값을 return
+    if (this.root.value === value) {
+      return this.root;
+    }
+    // 찾으려는 값을 찾지 못했을 때, 재귀함수 호출
+    return this.#search(this.root, value);
+  }
 }
 
 class Node {
