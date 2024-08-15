@@ -1,4 +1,4 @@
-class BinarySearchTree {
+export class BinarySearchTree {
   root = null;
 
   // insert의 재귀용 함수
@@ -184,3 +184,27 @@ class Node {
     this.value = value;
   }
 }
+
+// const bst = new BinarySearchTree();
+// bst.insert(5);
+// bst.insert(9);
+// bst.insert(4);
+// bst.insert(14);
+// bst.insert(19);
+// bst.insert(23);
+// bst.insert(7);
+// bst.insert(11);
+// bst.insert(8);
+// bst.insert(2);
+// bst.insert(16);
+// console.log(bst.search(16));
+// console.log(bst.search(18)); // null
+// bst.remove(8);
+// console.log(bst.remove(17)); // null
+// bst.remove(4);
+// bst;
+
+// const bst2 = new BinarySearchTree();
+// bst2.insert(100);
+// bst2.remove(100);
+// bst.root; // null?
